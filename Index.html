@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Family Book</title>
+    </head>
+<body>
+<h1>Family Book</h1>
+<hr> <hr>
+<img id="family_img" src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width:30%; height: 400px;">
+<h4 id="family_member_name"></h4>
+<button type="button" onclick="family()">Next</button>
+<hr>
+<script>
+    var images=["https://i.postimg.cc/MKdhy06Z/family.jpg","myfather.jpg","Mymother.jpg","Mybrother.jpg","me.png"];
+    var names=[
+        "1. My family book",
+        "2. My Father(Sushanta kumar das)",
+        "3. My Mother(Rutasarba das nayak)",
+        "4. My brother(Atman das)",
+        "5. Me (Advika das)"
+    ];
+    var i=0;
+
+    function family(){
+        i++;
+        var number_of_family_member=4
+        if(i>number_of_family_member){
+            i=0;
+        }
+        var updatedImage=images[i];
+        var updatedNames=names[i];
+        document.getElementById("family_member_name").innerHTML=updatedNames;
+        document.getElementById("family_img").src=updatedImage;
+    }
+</script>
+</body>
+</html>
